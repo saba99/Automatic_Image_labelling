@@ -1,6 +1,4 @@
-<h1 align="center">
-  <img src="labelme/icons/icon.png"><br/>labelme
-</h1>
+
 
 <h4 align="center">
   Image Polygonal Annotation with Python
@@ -18,7 +16,6 @@
   <a href="https://github.com/wkentaro/labelme/tree/main/examples/tutorial#tutorial-single-image-example"><b>Tutorial</b></a> |
   <a href="https://github.com/wkentaro/labelme/tree/main/examples"><b>Examples</b></a> |
   <a href="https://github.com/wkentaro/labelme/discussions"><b>Discussions</b></a> |
-  <a href="https://www.youtube.com/playlist?list=PLI6LvFw0iflh3o33YYnVIfOpaO0hc5Dzw"><b>Youtube FAQ</b></a>
 </div>
 
 <br/>
@@ -95,21 +92,6 @@ sudo pip3 install labelme
 # or install standalone executable from:
 # https://github.com/wkentaro/labelme/releases
 ```
-
-### macOS
-
-```bash
-brew install pyqt  # maybe pyqt5
-pip install labelme
-
-# or
-brew install wkentaro/labelme/labelme  # command line interface
-# brew install --cask wkentaro/labelme/labelme  # app
-
-# or install standalone executable/app from:
-# https://github.com/wkentaro/labelme/releases
-```
-
 ### Windows
 
 Install [Anaconda](https://www.continuum.io/downloads), then in an Anaconda Prompt run:
@@ -198,7 +180,6 @@ pyinstaller labelme.spec
 dist/labelme --version
 ```
 
-
 ## How to contribute
 
 Make sure below test passes on your environment.  
@@ -211,8 +192,3 @@ flake8 .
 black --line-length 79 --check labelme/
 MPLBACKEND='agg' pytest -vsx tests/
 ```
-
-
-## Acknowledgement
-
-This repo is the fork of [mpitid/pylabelme](https://github.com/mpitid/pylabelme).
