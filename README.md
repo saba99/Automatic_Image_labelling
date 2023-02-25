@@ -39,48 +39,6 @@ It is written in Python and uses Qt for its graphical interface.
 <i>Various primitives (polygon, rectangle, circle, line, and point).</i>
 
 
-## Features
-
-- [x] Image annotation for polygon, rectangle, circle, line and point. ([tutorial](examples/tutorial))
-- [x] Image flag annotation for classification and cleaning. ([#166](https://github.com/wkentaro/labelme/pull/166))
-- [x] Video annotation. ([video annotation](examples/video_annotation))
-- [x] GUI customization (predefined labels / flags, auto-saving, label validation, etc). ([#144](https://github.com/wkentaro/labelme/pull/144))
-- [x] Exporting VOC-format dataset for semantic/instance segmentation. ([semantic segmentation](examples/semantic_segmentation), [instance segmentation](examples/instance_segmentation))
-- [x] Exporting COCO-format dataset for instance segmentation. ([instance segmentation](examples/instance_segmentation))
-
-
-
-## Requirements
-
-- Ubuntu / macOS / Windows
-- Python3
-- [PyQt5 / PySide2](http://www.riverbankcomputing.co.uk/software/pyqt/intro)
-
-
-## Installation
-
-There are options:
-
-- Platform agnostic installation: [Anaconda](#anaconda)
-- Platform specific installation: [Ubuntu](#ubuntu), [macOS](#macos), [Windows](#windows)
-- Pre-build binaries from [the release section](https://github.com/wkentaro/labelme/releases)
-
-### Anaconda
-
-You need install [Anaconda](https://www.continuum.io/downloads), then run below:
-
-```bash
-# python3
-conda create --name=labelme python=3
-source activate labelme
-# conda install -c conda-forge pyside2
-# conda install pyqt
-# pip install pyqt5  # pyqt5 can be installed via pip on python3
-pip install labelme
-# or you can install everything by conda command
-# conda install labelme -c conda-forge
-```
-
 ### Ubuntu
 
 ```bash
@@ -108,9 +66,6 @@ pip install labelme
 
 ## Usage
 
-Run `labelme --help` for detail.  
-The annotations are saved as a [JSON](http://www.json.org/) file.
-
 ```bash
 labelme  # just open gui
 
@@ -128,27 +83,12 @@ labelme data_annotated/  # Open directory to annotate all images in it
 labelme data_annotated/ --labels labels.txt  # specify label list with a file
 ```
 
-For more advanced usage, please refer to the examples:
-
-* [Tutorial (Single Image Example)](examples/tutorial)
-* [Semantic Segmentation Example](examples/semantic_segmentation)
-* [Instance Segmentation Example](examples/instance_segmentation)
-* [Video Annotation Example](examples/video_annotation)
-
 ### Command Line Arguments
 - `--output` specifies the location that annotations will be written to. If the location ends with .json, a single annotation will be written to this file. Only one image can be annotated if a location is specified with .json. If the location does not end with .json, the program will assume it is a directory. Annotations will be stored in this directory with a name that corresponds to the image that the annotation was made on.
 - The first time you run labelme, it will create a config file in `~/.labelmerc`. You can edit this file and the changes will be applied the next time that you launch labelme. If you would prefer to use a config file from another location, you can specify this file with the `--config` flag.
 - Without the `--nosortlabels` flag, the program will list labels in alphabetical order. When the program is run with this flag, it will display labels in the order that they are provided.
 - Flags are assigned to an entire image. [Example](examples/classification)
 - Labels are assigned to a single polygon. [Example](examples/bbox_detection)
-
-## FAQ
-
-- **How to convert JSON file to numpy array?** See [examples/tutorial](examples/tutorial#convert-to-dataset).
-- **How to load label PNG file?** See [examples/tutorial](examples/tutorial#how-to-load-label-png-file).
-- **How to get annotations for semantic segmentation?** See [examples/semantic_segmentation](examples/semantic_segmentation).
-- **How to get annotations for instance segmentation?** See [examples/instance_segmentation](examples/instance_segmentation).
-
 
 ## Developing
 
