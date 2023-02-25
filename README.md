@@ -10,14 +10,6 @@
   <a href="https://github.com/wkentaro/labelme/actions"><img src="https://github.com/wkentaro/labelme/workflows/ci/badge.svg?branch=main&event=push"></a>
 </div>
 
-<div align="center">
-  <a href="#installation"><b>Installation</b></a> |
-  <a href="#usage"><b>Usage</b></a> |
-  <a href="https://github.com/wkentaro/labelme/tree/main/examples/tutorial#tutorial-single-image-example"><b>Tutorial</b></a> |
-  <a href="https://github.com/wkentaro/labelme/tree/main/examples"><b>Examples</b></a> |
-  <a href="https://github.com/wkentaro/labelme/discussions"><b>Discussions</b></a> |
-</div>
-
 <br/>
 
 <div align="center">
@@ -82,13 +74,6 @@ cd examples/semantic_segmentation
 labelme data_annotated/  # Open directory to annotate all images in it
 labelme data_annotated/ --labels labels.txt  # specify label list with a file
 ```
-
-### Command Line Arguments
-- `--output` specifies the location that annotations will be written to. If the location ends with .json, a single annotation will be written to this file. Only one image can be annotated if a location is specified with .json. If the location does not end with .json, the program will assume it is a directory. Annotations will be stored in this directory with a name that corresponds to the image that the annotation was made on.
-- The first time you run labelme, it will create a config file in `~/.labelmerc`. You can edit this file and the changes will be applied the next time that you launch labelme. If you would prefer to use a config file from another location, you can specify this file with the `--config` flag.
-- Without the `--nosortlabels` flag, the program will list labels in alphabetical order. When the program is run with this flag, it will display labels in the order that they are provided.
-- Flags are assigned to an entire image. [Example](examples/classification)
-- Labels are assigned to a single polygon. [Example](examples/bbox_detection)
 
 ## Developing
 
