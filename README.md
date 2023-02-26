@@ -26,19 +26,11 @@ It is written in Python and uses Qt for its graphical interface.
 ```bash
 sudo apt-get install labelme
 
-# or
-sudo pip3 install labelme
-
-# or install standalone executable from:
-# https://github.com/wkentaro/labelme/releases
 ```
 ### Windows
 
 ```bash
 pip install labelme
-
-# or install standalone executable/app from:
-# https://github.com/wkentaro/labelme/releases
 ```
 
 
