@@ -34,11 +34,7 @@ sudo pip3 install labelme
 ```
 ### Windows
 
-Install [Anaconda](https://www.continuum.io/downloads), then in an Anaconda Prompt run:
-
 ```bash
-conda create --name=labelme python=3
-conda activate labelme
 pip install labelme
 
 # or install standalone executable/app from:
