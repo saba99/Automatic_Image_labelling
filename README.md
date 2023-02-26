@@ -59,21 +59,8 @@ labelme data_annotated/ --labels labels.txt  # specify label list with a file
 git clone https://github.com/wkentaro/labelme.git
 cd labelme
 
-# Install anaconda3 and labelme
-curl -L https://github.com/wkentaro/dotfiles/raw/main/local/bin/install_anaconda3.sh | bash -s .
-source .anaconda3/bin/activate
-pip install -e .
-```
-
 
 ## How to build standalone executable
-
-Below shows how to build the standalone executable on macOS, Linux and Windows.  
-
-```bash
-# Setup conda
-conda create --name labelme python=3.9
-conda activate labelme
 
 # Build the standalone executable
 pip install .
